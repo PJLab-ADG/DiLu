@@ -1,0 +1,9 @@
+I have 5 actions to choose from. Now, I would like to know which action is possible.
+I should first check if I can accelerate, then idle, finally decelerate. I can also try to change lanes but with caution and not too frequently.
+
+- I want to know if I can accelerate, so I need to observe the car in front of me on the current lane, which is car `208`. The distance between me and car `208` is 710.76 - 687.94 = 22.82 m, and the difference in speed is 16.83 - 16.00 = 0.83 m/s. Car `208` is traveling 22.82 m ahead of me and its speed is 0.83 m/s faster than mine. This distance is safe and my speed is already lower than the front car on the current lane. So I should not accelerate.
+- Since I cannot accelerate, I want to know if I can maintain my current speed. I need to observe the car in front of me on the current lane, which is car `208`. Due to above calculation, the distance between me and car `208` is 22.82 m, and the difference in speed is 0.83 m/s. The distance 22.82 m is smaller than my preferred car following distance 30 m, but my speed is already lower than the front car on the current lane. So I cannot maintain my current speed.
+- I can try to change lanes to the right, but I need to check if it is safe. I need to observe the car on the lane to my right, which is car `872`. The distance between me and car `872` is 677.16 - 687.94 = -10.78 m, and the difference in speed is 19.95 - 16.00 = 3.95 m/s. Car `872` is traveling 10.78 m behind me and its speed is 3.95 m/s faster than mine. This distance is safe and my speed is lower than the rear car on the right lane. So I can change lanes to the right.
+Great, I can make my decision now. Decision: Turn-right
+
+Response to user:#### 2

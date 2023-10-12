@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+
+  <title>DiLu: A Knowledge-Driven Approach to Autonomous Driving with Large Language Models</title>
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <!-- <script defer src="static/js/fontawesome.all.min.js"></script> -->
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+  <script src="https://kit.fontawesome.com/dcd6d05807.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/9.1.0/marked.min.js"></script>
+</head>
+
+<body>
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">DiLu🐴: A Knowledge-Driven Approach to Autonomous Driving with
+              Large Language Models</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                <a href="https://wenlc.cn/" target="_blank">Licheng Wen</a><sup>1,<i
+                    class="fa-solid fa-scale-balanced fa-xs"></i></sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://scholar.google.com/citations?user=vIU6eHYAAAAJ" target="_blank">Daocheng
+                  Fu</a><sup>1,<i class="fa-solid fa-scale-balanced fa-xs"></i></sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://sankin97.github.io/" target="_blank">Xin Li</a><sup>1,2,<i
+                    class="fa-solid fa-scale-balanced fa-xs"></i></sup>,
+              </span>
+              <span class="author-block">
+                Xinyu Cai<sup>1</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://scholar.google.com/citations?user=9h86v8kAAAAJ&hl=en" target="_blank">Tao
+                  Ma</a><sup>1,3</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://pinlong-cai.github.io/" target="_blank">Pinlong Cai</a><sup>1</sup>,
+              </span><br>
+              <span class="author-block">
+                <a href="mailto:doumin@pjlab.org.cn" target="_blank">Min Dou</a><sup>1</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://scholar.google.com/citations?user=K0PpvLkAAAAJ" target="_blank">Botian
+                  Shi</a><sup>1,<i class="fa-regular fa-envelope fa-shake"></i></sup>,
+              </span>
+              <span>
+                <a href="https://faculty.ecnu.edu.cn/_s16/hl2/main.psp" target="_blank">
+                  Liang He</a><sup>2</sup>,
+              </span>
+              <span>
+                <a href="https://scholar.google.com/citations?user=gFtI-8QAAAAJ" target="_blank">Yu Qiao</a><sup>1</sup>
+              </span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>1</sup> Shanghai AI Laboratory, Shanghai, China<br><sup>2</sup> Department
+                of Computer Science, East
+                China Normal University<br><sup>3</sup> The Chinese University of Hong Kong
+              </span>
+              <span class="eql-cntrb">
+                <small>
+                  <br><sup><i class="fa-solid fa-scale-balanced fa-sm"></i></sup> Equal Contribution
+                  <br><sup><i class="fa-regular fa-envelope fa-shake"></i></sup> Corresponding author
+                </small>
+              </span>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+
+                <!-- Github link -->
+                <span class="link-block">
+                  <a href="https://github.com/PJLab-ADG/DiLu" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+
+                <!-- ArXiv abstract Link -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2309.16292" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Teaser video-->
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <center>
+          <video poster="" id="tree" autoplay controls muted loop height="100%" width="80%">
+            <!-- Your video here -->
+            <source src="static/videos/video1.mp4" type="video/mp4">
+          </video>
+          <h2 class="subtitle has-text-centered">
+            The DiLu framework excels at handling closed-loop driving tasks in challenging driving environments. This
+            framework performs comprehensible reasoning processes and consistently makes safe and logical decisions.
+          </h2>
+      </div>
+    </div>
+  </section>
+  <!-- End teaser video -->
+
+
+
+
+  <!-- Paper abstract -->
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              <b>
+                Recent advancements in autonomous driving have relied on data-driven approaches, which are widely
+                adopted
+                but face challenges including dataset bias, overfitting, and uninterpretability. Drawing inspiration
+                from
+                the knowledge-driven nature of human driving, we explore the question of how to instill similar
+                capabilities into autonomous driving systems and summarize a paradigm that integrates an interactive
+                environment, a driver agent, as well as a memory component to address this question. Leveraging large
+                language models with emergent abilities, we propose the DiLu framework, which combines a Reasoning and a
+                Reflection module to enable the system to perform decision-making based on common-sense knowledge and
+                evolve continuously. Extensive experiments prove DiLu's capability to accumulate experience and
+                demonstrate a significant advantage in generalization ability over reinforcement learning-based methods.
+                Moreover, DiLu is able to directly acquire experiences from real-world datasets which highlights its
+                potential to be deployed on practical autonomous driving systems. To the best of our knowledge, we are
+                the
+                first to instill knowledge-driven capability into autonomous driving systems from the perspective of how
+                humans drive.
+              </b>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End paper abstract -->
+
+
+
+  <section class="section" id="Paradigm">
+    <div class="container is-max-desktop">
+      <h2 class="title">Knowledge-driven Paradigm</h2>
+      <div class="hero-body">
+        <center>
+          <embed type="image/svg+xml" src="static/images/dilu-Page-3.svg" width="80%" />
+        </center>
+        <h2 class="subtitle has-text-justified" style="padding-top: 1rem;">
+          The knowledge-driven paradigm for autonomous driving systems includes three components:
+          <ol>
+            <li>An <a style="color:darkgreen">environment</a> with which an agent can interact;
+            </li>
+            <li>A <a style="color:#FF6F61">driver agent</a> with recall, reasoning, and reflection abilities;
+            </li>
+            <li>A <a style="color:#2F80ED">memory component</a> to persist experiences;
+            </li>
+          </ol>
+          In continuous evolution, the driver agent observes the environment, queries, and updates experiences from the
+          memory component and performs decision-making.
+        </h2>
+      </div>
+    </div>
+  </section>
+
+  <!-- Videos should be placed here. -->
+
+  <section class="section" id="Framework">
+    <div class="container is-max-desktop">
+      <h2 class="title">Framework</h2>
+      <div class="hero-body">
+        <center>
+          <embed type="image/svg+xml" src="static/images/dilu-DiLu_framework.svg" width="80%" />
+        </center>
+        <h2 class="subtitle has-text-justified" style="padding-top: 1rem;" style="width: 80%;">
+          Based on the knowledge-driven paradigm for autonomous driving systems introduced above, we propose a practical
+          framework called DiLu.
+          <br>
+          DiLu consists of four core modules: <b>Environment, Reasoning, Reflection, and Memory</b>.
+          In particular, the Reasoning module begins by observing the environment and obtaining descriptions of the
+          current scenario. Concurrently, a prompt generator is employed to combine this scenario description with the
+          few-shot experiences of similar situations, which retrieved from the Memory module.
+          These prompts are then fed into an out-of-the-box Large Language Model (LLM), and the decision decoder make an
+          action by decoding LLM's response.
+        </h2>
+        <br>
+        <h3>Reasoning module</h3>
+        <br>
+        <center>
+          <embed type="image/svg+xml" src="static/images/dilu-Reasoning module.svg" width="80%" />
+        </center>
+        <h2 class="subtitle has-text-justified" style="padding-top: 1rem;" style="width: 80%;">
+          In the Reasoning module, we utilize the experiences derived from the Memory module and the common-sense
+          knowledge of the LLM to perform decision-making for the current traffic scenario.
+          Specifically, the reasoning procedure contains the following procedures:
+          <ol>
+            <li>Encode the scenario by a descriptor; </li>
+            <li>Recall several experience from the Memory module; </li>
+            <li>Generate the prompt; </li>
+            <li>Feed the prompt into the LLM; </li>
+            <li>Decode the action from the LLM's response.</li>
+          </ol>
+        </h2>
+        <br>
+        <h3>Reflection module</h3>
+        <br>
+        <center>
+          <embed type="image/svg+xml" src="static/images/dilu-reflection.svg" width="80%" />
+        </center>
+
+        <br>
+        <h2 class="subtitle has-text-justified" style="padding-top: 1rem;" style="width: 80%;">
+          The Reflection module in DiLu is designed to enhance autonomous driving capabilities by continuously learning
+          from past experiences. It records driving scenarios and decisions made by the Reasoning module during
+          closed-loop driving tasks. Successful sessions enrich the Memory module with key decision frames, while
+          sessions ending in hazards prompt the module to analyze mistakes, rectify decisions, and propose strategies
+          for safer driving, all contributing to the system's improvement.
+        </h2>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="hero teaser">
+    <div class="container is-max-desktop" style="margin-top: 2rem;">
+      <h2 class="title">Results</h2>
+      <div class="row g-3">
+        <div class="col">
+          <video poster="" id="v1" autoplay controls muted loop height="100%">
+            <!-- Your video here -->
+            <source src="static/videos/lane4_density2.mp4" type="video/mp4">
+          </video>
+          <h2 class="subtitle has-text-centered">
+            4 lane with medium traffic
+          </h2>
+        </div>
+        <div class="col">
+          <video poster="" id="v2" autoplay controls muted loop height="100%">
+            <source src="static/videos/lane5_density2.5.mp4">
+          </video>
+          <h2 class="subtitle has-text-centered">
+            5 lane with medium traffic
+          </h2>
+        </div>
+      </div>
+      <div class="row g-3">
+        <div class="col">
+          <video poster="" id="v2" autoplay controls muted loop height="100%">
+            <source src="static/videos/lane5_density3.mp4">
+          </video>
+          <h2 class="subtitle has-text-centered">
+            5 lane with heavy traffic
+          </h2>
+        </div>
+        <div class="col">
+          <video poster="" id="v2" autoplay controls muted loop height="100%">
+            <source src="static/videos/citysim_lane4.mp4">
+          </video>
+          <h2 class="subtitle has-text-centered">
+            Directly use experience from <a href="https://github.com/ozheng1993/UCF-SST-CitySim-Dataset">CitySim</a>
+          </h2>
+        </div>
+      </div>
+      <h2 class="subtitle has-text-centered">
+        The <b>closed-loop</b> driving task in <a href="http://highway-env.farama.org/">Highway-env</a> under different
+        settings.
+        The <span style="color:green;">ego car</span> is controlled by DiLu and the decision-making processes are fully
+        text-based. Dilu learns to follow cars and make sensible lane changes from the past experience in Memory module.
+      </h2>
+    </div>
+  </section>
+
+
+  <section class="section" id="LiveDemo">
+    <div class="container is-max-desktop">
+      <h2 class="title">See what's DiLu thinking:</h2>
+      <div class="row g-3">
+        <div class="col-6">
+          <div class="input-group mb-3">
+            <button type="button" class="btn btn-outline-secondary" disabled>Decision Frame</button>
+            <input id="decisionFrameValue" type="number" class="form-control"
+              aria-label="Text input with segmented dropdown button" max="29" min="0" value="0">
+            <button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              <span class="visually-hidden">Toggle Dropdown</span>
+            </button>
+            <ul class="dropdown-menu" id="dropdownList">
+              <li class="dropdown-item">0</li>
+              <li class="dropdown-item">1</li>
+              <li class="dropdown-item">2</li>
+              <li class="dropdown-item">3</li>
+              <li class="dropdown-item">4</li>
+              <li class="dropdown-item">5</li>
+              <li class="dropdown-item">6</li>
+              <li class="dropdown-item">7</li>
+              <li class="dropdown-item">8</li>
+              <li class="dropdown-item">9</li>
+              <li class="dropdown-item">10</li>
+              <li class="dropdown-item">11</li>
+              <li class="dropdown-item">12</li>
+              <li class="dropdown-item">13</li>
+              <li class="dropdown-item">14</li>
+              <li class="dropdown-item">15</li>
+              <li class="dropdown-item">16</li>
+              <li class="dropdown-item">17</li>
+              <li class="dropdown-item">18</li>
+              <li class="dropdown-item">19</li>
+              <li class="dropdown-item">20</li>
+              <li class="dropdown-item">21</li>
+              <li class="dropdown-item">22</li>
+              <li class="dropdown-item">23</li>
+              <li class="dropdown-item">24</li>
+              <li class="dropdown-item">25</li>
+              <li class="dropdown-item">26</li>
+              <li class="dropdown-item">27</li>
+              <li class="dropdown-item">28</li>
+              <li class="dropdown-item">29</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-2">
+          <button type="button" class="btn btn-outline-secondary w-100" onclick="viewFrame()">View Frame</button>
+        </div>
+        <div class="col-2">
+          <button type="button" class="btn btn-outline-secondary w-100" onclick="lastFrame()">Last Frame</button>
+        </div>
+        <div class="col-2">
+          <button type="button" class="btn btn-outline-secondary w-100" onclick="nextFrame()">Next Frame</button>
+        </div>
+      </div>
+      <img src="static/images/decisionFrame_0.png" class="img-thumbnail" id="frameImage">
+      <div class="row g-3" style="margin-top: 1rem;">
+        <div class="col">
+          <p class="fw-bold">Description of frame</p>
+          <div id="showDescription" style="height: 500px; overflow-y: auto; background-color: #f5f5f5;"></div>
+        </div>
+        <div class="col">
+          <p class="fw-bold">Decisions generated by DiLu🐴</p>
+          <div id="showThoughtsDecision" style="height: 500px; overflow-y: auto; background-color: #f5f5f5;"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <div style="position: relative;">
+        <button id="copyButton" style="position: absolute; top: 0; right: 0;">Copy</button>
+        <pre><code id="bibtexCode">@misc{wen2023dilu,
+    title={DiLu: A Knowledge-Driven Approach to Autonomous Driving with Large Language Models}, 
+    author={Licheng Wen and Daocheng Fu and Xin Li and Xinyu Cai and Tao Ma and Pinlong Cai and Min Dou and Botian Shi and Liang He and Yu Qiao},
+    year={2023},
+    eprint={2309.16292},
+    archivePrefix={arXiv},
+    primaryClass={cs.RO}
+}
+
+@misc{fu2023drive,
+  title={Drive Like a Human: Rethinking Autonomous Driving with Large Language Models}, 
+  author={Daocheng Fu and Xin Li and Licheng Wen and Min Dou and Pinlong Cai and Botian Shi and Yu Qiao},
+  year={2023},
+  eprint={2307.07162},
+  archivePrefix={arXiv},
+  primaryClass={cs.RO}
+}
+      </code></pre>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    var copyButton = document.getElementById("copyButton");
+
+    copyButton.addEventListener("click", function () {
+      var codeElement = document.getElementById("bibtexCode");
+      var textToCopy = codeElement.textContent;
+
+      var textarea = document.createElement("textarea");
+      textarea.value = textToCopy;
+      document.body.appendChild(textarea);
+      textarea.select();
+      document.execCommand("copy");
+      document.body.removeChild(textarea);
+
+      copyButton.textContent = "✓ Copied!";
+
+      setTimeout(function () {
+        copyButton.textContent = "Copy";
+      }, 2000); // Reset the button text after 2 seconds (adjust as needed)
+    });
+  </script>
+  <!--End BibTex citation -->
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+
+            <p style="text-align: center;"><i class="fa-solid fa-heart fa-beat-fade" style="color: #ff8787;"></i>
+              This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template"
+                target="_blank">Academic Project Page Template</a> <i class="fa-solid fa-heart fa-beat-fade"
+                style="color: #ff8787;"></i>
+            </p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Statcounter tracking code -->
+
+  <!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+  <!-- End of Statcounter Code -->
+
+</body>
+<script>
+  function getText(url, callback) {
+    $.get(url, function (data) {
+      callback(data);
+    })
+  }
+  function isDecisionFrameValid(value) {
+    if (value === '') {
+      alert('Please input a Decision Frame.')
+      return false;
+    }
+
+    var intValue = parseInt(value, 10);
+    if (intValue >= 0 && intValue <= 29 && value == intValue) {
+      return true;
+    } else {
+      alert('The Decision Frame should be an integer between 0 and 29.')
+      return false;
+    }
+  }
+  function viewFrame() {
+    var currentDecisionFrame = $('#decisionFrameValue').val();
+    if (isDecisionFrameValid(currentDecisionFrame)) {
+      var imagePath = 'static/images/decisionFrame_' + currentDecisionFrame + '.png';
+      $('#frameImage').attr('src', imagePath);
+      var SDPath = 'static/text/scenarioDescription_' + currentDecisionFrame + '.txt';
+      getText(SDPath, function (data) {
+        var htmlText = marked.parse(data);
+        $('#showDescription').html(htmlText);
+      });
+      var TDPath = 'static/text/thoughtsDecision_' + currentDecisionFrame + '.txt';
+      getText(TDPath, function (data) {
+        var htmlText = marked.parse(data);
+        $('#showThoughtsDecision').html(htmlText);
+      });
+    }
+  }
+  function lastFrame() {
+    var currentDecisionFrame = parseInt($('#decisionFrameValue').val(), 10);
+    if (isDecisionFrameValid(currentDecisionFrame)) {
+      var lastDecisionFrame = currentDecisionFrame - 1;
+      if (isDecisionFrameValid(lastDecisionFrame)) {
+        $("#decisionFrameValue").val(lastDecisionFrame);
+        viewFrame();
+      }
+    }
+  }
+  function nextFrame() {
+    var currentDecisionFrame = parseInt($('#decisionFrameValue').val(), 10);
+    if (isDecisionFrameValid(currentDecisionFrame)) {
+      var nextDecisionFrame = currentDecisionFrame + 1;
+      if (isDecisionFrameValid(nextDecisionFrame)) {
+        $("#decisionFrameValue").val(nextDecisionFrame);
+        viewFrame();
+      }
+    }
+  }
+  $(document).ready(function () {
+    $("#dropdownList li").click(function () {
+      var number = parseInt($(this).text(), 10);
+      $("#decisionFrameValue").val(number);
+    });
+    getText('static/text/scenarioDescription_0.txt', function (data) {
+      var htmlText = marked.parse(data);
+      $('#showDescription').html(htmlText);
+    });
+    getText('static/text/thoughtsDecision_0.txt', function (data) {
+      var htmlText = marked.parse(data);
+      $('#showThoughtsDecision').html(htmlText);
+    })
+  });
+
+</script>
+
+</html>

@@ -1,0 +1,19 @@
+#### Driving scenario description:
+You are driving on a road with 5 lanes, and you are currently driving in the rightmost lane. Your current position is `(766.79, 16.00)`, speed is 23.86 m/s, acceleration is 0.26 m/s^2, and lane position is 766.79 m.
+There are other vehicles driving around you, and below is their basic information:
+- Vehicle `208` is driving on the lane to your left and is ahead of you. The position of it is `(779.85, 12.00)`, speed is 17.73 m/s, acceleration is 0.22 m/s^2, and lane position is 779.85 m.
+- Vehicle `872` is driving on the lane to your left and is behind of you. The position of it is `(737.22, 12.02)`, speed is 15.78 m/s, acceleration is 1.03 m/s^2, and lane position is 737.22 m.
+- Vehicle `400` is driving on the same lane as you and is ahead of you. The position of it is `(810.86, 16.00)`, speed is 19.90 m/s, acceleration is 0.03 m/s^2, and lane position is 810.86 m.
+
+#### Driving Intensions:
+Not available
+#### Available actions:
+Your available actions are: 
+IDLE - remain in the current lane with current speed Action_id: 1
+Turn-left - change lane to the left of the current lane Action_id: 0
+Acceleration - accelerate the vehicle Action_id: 3
+Deceleration - decelerate the vehicle Action_id: 4
+
+
+Remember to follow the format instructions.
+You can stop reasoning once you have a valid action to take. 

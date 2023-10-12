@@ -1,0 +1,22 @@
+#### Driving scenario description:
+You are driving on a road with 5 lanes, and you are currently driving in the second lane from the left. Your current position is `(548.25, 12.00)`, speed is 8.82 m/s, acceleration is -1.54 m/s^2, and lane position is 548.25 m.
+There are other vehicles driving around you, and below is their basic information:
+- Vehicle `400` is driving on the lane to your right and is ahead of you. The position of it is `(557.54, 16.00)`, speed is 17.66 m/s, acceleration is 0.91 m/s^2, and lane position is 557.54 m.
+- Vehicle `848` is driving on the lane to your left and is ahead of you. The position of it is `(559.17, 8.00)`, speed is 18.14 m/s, acceleration is -0.20 m/s^2, and lane position is 559.17 m.
+- Vehicle `208` is driving on the same lane as you and is ahead of you. The position of it is `(564.30, 12.00)`, speed is 16.25 m/s, acceleration is -0.10 m/s^2, and lane position is 564.30 m.
+- Vehicle `160` is driving on the lane to your left and is behind of you. The position of it is `(521.82, 8.00)`, speed is 16.60 m/s, acceleration is 0.28 m/s^2, and lane position is 521.82 m.
+- Vehicle `872` is driving on the lane to your right and is behind of you. The position of it is `(515.35, 14.78)`, speed is 13.11 m/s, acceleration is 1.86 m/s^2, and lane position is 515.36 m.
+
+#### Driving Intensions:
+Not available
+#### Available actions:
+Your available actions are: 
+IDLE - remain in the current lane with current speed Action_id: 1
+Turn-left - change lane to the left of the current lane Action_id: 0
+Turn-right - change lane to the right of the current lane Action_id: 2
+Acceleration - accelerate the vehicle Action_id: 3
+Deceleration - decelerate the vehicle Action_id: 4
+
+
+Remember to follow the format instructions.
+You can stop reasoning once you have a valid action to take. 
