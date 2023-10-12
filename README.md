@@ -3,8 +3,6 @@
 [![Custom badge](https://img.shields.io/badge/paper-Arxiv-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2309.16292)
 [![Custom badge](https://img.shields.io/badge/Project%20Page-white?logo=GitHub&color=green)](https://pjlab-adg.github.io/DiLu)
 
----
-
 > DiLu is an innovative **closed-loop** and **self-evolving** framework for autonomous driving that integrates common-sense knowledge and memory components, empowered by large language models.
 
 ## 🌟Highlights
