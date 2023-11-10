@@ -38,12 +38,10 @@ framework called DiLu, which consists of four core modules: <b>Environment, Reas
 
 ## Cite
 ```
-@misc{wen2023dilu,
-    title={DiLu: A Knowledge-Driven Approach to Autonomous Driving with Large Language Models}, 
-    author={Licheng Wen and Daocheng Fu and Xin Li and Xinyu Cai and Tao Ma and Pinlong Cai and Min Dou and Botian Shi and Liang He and Yu Qiao},
-    year={2023},
-    eprint={2309.16292},
-    archivePrefix={arXiv},
-    primaryClass={cs.RO}
+@article{wen2023dilu,
+  title={Dilu: A knowledge-driven approach to autonomous driving with large language models},
+  author={Wen, Licheng and Fu, Daocheng and Li, Xin and Cai, Xinyu and Ma, Tao and Cai, Pinlong and Dou, Min and Shi, Botian and He, Liang and Qiao, Yu},
+  journal={arXiv preprint arXiv:2309.16292},
+  year={2023}
 }
 ```
