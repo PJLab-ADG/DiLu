@@ -6,6 +6,7 @@
 > DiLu is an innovative **closed-loop** and **self-evolving** framework for autonomous driving that integrates common-sense knowledge and memory components, empowered by large language models.
 
 ## 🌟Highlights
+- **`2024-01-17`** **DiLu is accepted by ICLR 2024🎉🎉! The code will be released very soon.**
 - **`2023-10-12`** Our project page is now online, [Check it out here](https://pjlab-adg.github.io/DiLu)🔗!
 - **`2023-09-28`** Our paper is available on [Arxiv](https://arxiv.org/abs/2309.16292)📄!
 
