@@ -10,6 +10,10 @@
 > 
 > In the face of adversity, the legendary horse DiLu  follows Liu Bei's words to leapt across the Tanxi River, embodying intelligence and strength. Inspired by this tale, our DiLu framework endeavors to navigate the challenging terrains of autonomous driving.
 
+
+<img src="https://github.com/PJLab-ADG/DiLu/assets/18390668/805b620c-ccf3-46a9-9a72-dec9e28a28dc" width=80%>
+
+
 ## 🔍 Framework Overview
 
 <img src="./assets/framework.png" width=80%>
@@ -20,7 +24,7 @@ DiLu is not just a framework, it's an exploration of [Knowledge-driven Autonomou
 
 
 ## 🌟 Highlights
-- Codes are now release!
+- **`2024-01-22`** Codes are now release!
 - **`2024-01-17`** Exciting news! **DiLu is accepted by ICLR 2024 🎉🎉!** 
 - **`2023-10-12`** Explore our project page, now live [here](https://pjlab-adg.github.io/DiLu)🔗!
 - **`2023-09-28`** Our paper is available on [Arxiv](https://arxiv.org/abs/2309.16292)📄!
