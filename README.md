@@ -11,7 +11,10 @@
 > In the face of adversity, the legendary horse DiLu  follows Liu Bei's words to leapt across the Tanxi River, embodying intelligence and strength. Inspired by this tale, our DiLu framework endeavors to navigate the challenging terrains of autonomous driving.
 
 
-<img src="https://github.com/PJLab-ADG/DiLu/assets/18390668/805b620c-ccf3-46a9-9a72-dec9e28a28dc" width=80%>
+
+https://github.com/PJLab-ADG/DiLu/assets/18390668/cd48747f-f710-4a42-abb9-ca15e7ee68f2
+
+
 
 
 ## 🔍 Framework Overview
