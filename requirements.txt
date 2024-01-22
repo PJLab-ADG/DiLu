@@ -1,0 +1,13 @@
+gymnasium==0.28.1
+highway-env==1.8.2
+langchain==0.0.335
+openai==0.28.1
+chromadb==0.3.29
+matplotlib==3.7.1
+numpy==1.24.3
+PyYAML==6.0
+gradio==3.36.0
+gradio_client==0.2.7
+rich
+moviepy
+tiktoken

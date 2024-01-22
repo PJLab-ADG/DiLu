@@ -1,0 +1,25 @@
+
+############ Large language model config ############
+OPENAI_API_TYPE: # 'openai' or 'azure'
+# below are for Openai
+OPENAI_KEY: # 'sk-xxxxxx' 
+OPENAI_CHAT_MODEL: 'gpt-4-1106-preview' # Alternative models: 'gpt-3.5-turbo-16k-0613' (note: performance may vary)
+# below are for Azure OAI service
+AZURE_API_BASE: # https://xxxxxxx.openai.azure.com/
+AZURE_API_VERSION: "2023-07-01-preview"
+AZURE_API_KEY: #'xxxxxxx'
+AZURE_CHAT_DEPLOY_NAME: # chat model deployment name
+AZURE_EMBED_DEPLOY_NAME: # text embed model deployment name  
+
+############### DiLu settings ############
+reflection_module: False # True or False
+few_shot_num: 3 # 0 for zero-shot
+episodes_num: 3 # run episodes
+memory_path: 'memories/20_mem'
+result_folder: 'results'
+
+############ Highway-env config ############
+simulation_duration: 20 # step
+vehicle_count: 15
+other_vehicle_type: "highway_env.vehicle.behavior.IDMVehicle" #other types are: "highway_env.vehicle.behavior.DefensiveVehicle" or "highway_env.vehicle.behavior.AggressiveVehicle"
+vehicles_density: 2.0
